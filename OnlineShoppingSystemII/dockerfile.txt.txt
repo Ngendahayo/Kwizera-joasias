@@ -1,0 +1,11 @@
+# Use a simple base image
+FROM alpine:latest
+
+# Set a maintainer label (optional)
+LABEL maintainer="jozzenozzle@gmail.com"
+
+# Create a file with your project ID
+RUN echo "Project ID: 26135" > /project_id.txt
+
+# Set the default command
+CMD ["cat", "/project_id.txt"]
